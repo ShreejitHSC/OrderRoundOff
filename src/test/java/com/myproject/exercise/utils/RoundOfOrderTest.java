@@ -3,7 +3,7 @@ package com.myproject.exercise.utils;
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
+import static org.fest.assertions.Assertions.assertThat;
 
 /**
  * Created by skakk2 on 9/10/2016.
@@ -26,4 +26,12 @@ public class RoundOfOrderTest {
         String biggerValue = "555555555";
         roundOfOrder.convertToText(biggerValue);
     }
+
+    @Test
+    public void testValueLesserThanTen() throws Exception {
+        String testValue = "5";
+        String retValue = roundOfOrder.convertToText(testValue);
+        assertThat(retValue).isEqualToIgnoringCase("Five ");
+    }
+
 }

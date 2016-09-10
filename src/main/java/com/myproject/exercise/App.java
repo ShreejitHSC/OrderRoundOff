@@ -12,7 +12,8 @@ public class App {
     public static void main(String[] args) throws Exception {
         if (args.length == 1) {
             RoundOfOrder roundOfOrder = new RoundOfOrder();
-            roundOfOrder.convertToText(args[0]);
+            String textValueOfInt = roundOfOrder.convertToText(args[0]);
+            logger.info("The text value entered is : " + textValueOfInt);
         }else{
             logger.error("Atleast one argument is needed as an input");
             throw new Exception();
