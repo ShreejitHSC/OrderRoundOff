@@ -34,4 +34,11 @@ public class RoundOfOrderTest {
         assertThat(retValue).isEqualToIgnoringCase("Five ");
     }
 
+    @Test
+    public void testValueLesserThanTwenty() throws Exception {
+        String testValue = "15";
+        String retValue = roundOfOrder.convertToText(testValue);
+        assertThat(retValue).isEqualToIgnoringCase("Fifteen ");
+    }
+
 }
