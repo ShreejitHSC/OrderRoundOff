@@ -27,7 +27,7 @@ public class RoundOfOrder {
         String txtValueOfInteger = "Zero";
         int charLength = String.valueOf(intValueOfInput).length();
 
-        if(charLength == 1){
+        if(charLength == 1 && !intValueOfInput.equals(0)){
             txtValueOfInteger = valueBelowTen(intValueOfInput);
         }else if (charLength == 2){
             txtValueOfInteger = valueBelowHundred(intValueOfInput);
@@ -52,7 +52,7 @@ public class RoundOfOrder {
         if(intValueOfInput < 20){
             textValue = textValue.append(valueBelowTwenty(intValueOfInput));
         }else{
-            //anything above twenty
+            textValue = textValue.append(tenthValues(intValueOfInput/10) + valueBelowTen(intValueOfInput % 10));
         }
         return String.valueOf(textValue);
     }
@@ -105,6 +105,29 @@ public class RoundOfOrder {
                 return "Eight ";
             case 9:
                 return "Nine ";
+        }
+        return "";
+    }
+
+    private String tenthValues(Integer intValueOfInput){
+        switch(intValueOfInput)
+        {
+            case 2:
+                return "Twenty ";
+            case 3:
+                return "Thirty ";
+            case 4:
+                return "Forty ";
+            case 5:
+                return "Fifty ";
+            case 6:
+                return "Sixty ";
+            case 7:
+                return "Seventy ";
+            case 8:
+                return "Eighty ";
+            case 9:
+                return "Ninty ";
         }
         return "";
     }
