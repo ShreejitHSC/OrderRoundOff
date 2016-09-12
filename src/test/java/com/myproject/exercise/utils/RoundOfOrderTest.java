@@ -132,4 +132,60 @@ public class RoundOfOrderTest {
         assertThat(retValue).isEqualToIgnoringCase("Ninty Nine ");
     }
 
+    @Test
+    public void testValueOneHundred() throws Exception {
+        String testValue = "100";
+        String retValue = roundOfOrder.convertToText(testValue);
+        assertThat(retValue).isEqualToIgnoringCase("One Hundred ");
+    }
+
+    @Test
+    public void testValueTwoHundredOne() throws Exception {
+        String testValue = "201";
+        String retValue = roundOfOrder.convertToText(testValue);
+        assertThat(retValue).isEqualToIgnoringCase("Two Hundred One ");
+    }
+
+    @Test
+    public void testValueTwoHundredEleven() throws Exception {
+        String testValue = "211";
+        String retValue = roundOfOrder.convertToText(testValue);
+        assertThat(retValue).isEqualToIgnoringCase("Two Hundred Eleven ");
+    }
+
+    @Test
+    public void testValueTwoHundredTwenty() throws Exception {
+        String testValue = "220";
+        String retValue = roundOfOrder.convertToText(testValue);
+        assertThat(retValue).isEqualToIgnoringCase("Two Hundred Twenty ");
+    }
+
+    @Test
+    public void testValueTwoHundredTwentyFive() throws Exception {
+        String testValue = "225";
+        String retValue = roundOfOrder.convertToText(testValue);
+        assertThat(retValue).isEqualToIgnoringCase("Two Hundred Twenty Five ");
+    }
+
+    @Test
+    public void testValueThreeHundredThirtyEight() throws Exception {
+        String testValue = "338";
+        String retValue = roundOfOrder.convertToText(testValue);
+        assertThat(retValue).isEqualToIgnoringCase("Three Hundred Thirty Eight ");
+    }
+
+    @Test
+    public void testValueFourHundredFortySix() throws Exception {
+        String testValue = "446";
+        String retValue = roundOfOrder.convertToText(testValue);
+        assertThat(retValue).isEqualToIgnoringCase("Four Hundred Forty Six ");
+    }
+
+    @Test
+    public void testValueNineHundredNinetyNine() throws Exception {
+        String testValue = "999";
+        String retValue = roundOfOrder.convertToText(testValue);
+        assertThat(retValue).isEqualToIgnoringCase("Nine Hundred Ninety Nine ");
+    }
+
 }

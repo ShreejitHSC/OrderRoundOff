@@ -27,13 +27,13 @@ public class RoundOfOrder {
         String txtValueOfInteger = "Zero";
         int charLength = String.valueOf(intValueOfInput).length();
 
-        if(charLength == 1 && !intValueOfInput.equals(0)){
-            txtValueOfInteger = valueBelowTen(intValueOfInput);
-        }else if (charLength == 2){
+        if (charLength == 1 && !intValueOfInput.equals(0)) {
+            txtValueOfInteger = valueBelowTwenty(intValueOfInput);
+        } else if (charLength == 2) {
             txtValueOfInteger = valueBelowHundred(intValueOfInput);
-        }/*else if (charLength == 3){
+        } else if (charLength == 3) {
             txtValueOfInteger = valueBelowThousand(intValueOfInput);
-        }else if (charLength == 4){
+        }/*else if (charLength == 4){
             txtValueOfInteger = valueBelowTenThousand(intValueOfInput);
         }else if (charLength == 5){
             txtValueOfInteger = valueBelowLac(intValueOfInput);
@@ -47,19 +47,42 @@ public class RoundOfOrder {
         return txtValueOfInteger;
     }
 
-    private String valueBelowHundred(Integer intValueOfInput) {
-        StringBuilder textValue = new StringBuilder();
-        if(intValueOfInput < 20){
-            textValue = textValue.append(valueBelowTwenty(intValueOfInput));
-        }else{
-            textValue = textValue.append(tenthValues(intValueOfInput/10) + valueBelowTen(intValueOfInput % 10));
+    private String valueBelowThousand(Integer intValueOfInput) {
+        if ((intValueOfInput % 100) < 20) {
+            return valueBelowTwenty(intValueOfInput / 100) + "Hundred " + valueBelowTwenty(intValueOfInput % 100);
+        } else {
+            return valueBelowTwenty(intValueOfInput / 100) + "Hundred " + valueBelowHundred(intValueOfInput % 100);
         }
-        return String.valueOf(textValue);
+    }
+
+    private String valueBelowHundred(Integer intValueOfInput) {
+        if (intValueOfInput < 20) {
+            return valueBelowTwenty(intValueOfInput);
+        } else {
+            return tenthValues(intValueOfInput / 10) + valueBelowTwenty(intValueOfInput % 10);
+        }
     }
 
     private String valueBelowTwenty(Integer intValueOfInput) {
-        switch(intValueOfInput)
-        {
+        switch (intValueOfInput) {
+            case 1:
+                return "One ";
+            case 2:
+                return "Two ";
+            case 3:
+                return "Three ";
+            case 4:
+                return "Four ";
+            case 5:
+                return "Five ";
+            case 6:
+                return "Six ";
+            case 7:
+                return "Seven ";
+            case 8:
+                return "Eight ";
+            case 9:
+                return "Nine ";
             case 10:
                 return "Ten ";
             case 11:
@@ -84,34 +107,8 @@ public class RoundOfOrder {
         return "";
     }
 
-    private String valueBelowTen(Integer intValueOfInput) {
-        switch(intValueOfInput)
-        {
-            case 1:
-                return "One ";
-            case 2:
-                return "Two ";
-            case 3:
-                return "Three ";
-            case 4:
-                return "Four ";
-            case 5:
-                return "Five ";
-            case 6:
-                return "Six ";
-            case 7:
-                return "Seven ";
-            case 8:
-                return "Eight ";
-            case 9:
-                return "Nine ";
-        }
-        return "";
-    }
-
-    private String tenthValues(Integer intValueOfInput){
-        switch(intValueOfInput)
-        {
+    private String tenthValues(Integer intValueOfInput) {
+        switch (intValueOfInput) {
             case 2:
                 return "Twenty ";
             case 3:
@@ -127,7 +124,7 @@ public class RoundOfOrder {
             case 8:
                 return "Eighty ";
             case 9:
-                return "Ninty ";
+                return "Ninety ";
         }
         return "";
     }
