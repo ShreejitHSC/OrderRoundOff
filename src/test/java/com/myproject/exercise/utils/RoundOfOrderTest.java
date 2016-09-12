@@ -23,254 +23,226 @@ public class RoundOfOrderTest {
 
     @Test(expected = Exception.class)
     public void testBiggerIntegerValuesMoreThanEightDigits() throws Exception {
-        String biggerValue = "555555555";
-        roundOfOrder.convertToText(biggerValue);
+        roundOfOrder.convertToText("555555555");
     }
 
     @Test
     public void testValueZero() throws Exception {
-        String testValue = "0";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Zero");
+        assertThat(roundOfOrder.convertToText("0")).isEqualToIgnoringCase("Zero");
     }
 
     @Test
     public void testValueFive() throws Exception {
-        String testValue = "5";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Five ");
+        assertThat(roundOfOrder.convertToText("5")).isEqualToIgnoringCase("Five ");
     }
 
     @Test
     public void testValueNine() throws Exception {
-        String testValue = "9";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Nine ");
+        assertThat(roundOfOrder.convertToText("9")).isEqualToIgnoringCase("Nine ");
     }
 
     @Test
     public void testValueEleven() throws Exception {
-        String testValue = "11";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Eleven ");
+        assertThat(roundOfOrder.convertToText("11")).isEqualToIgnoringCase("Eleven ");
     }
 
     @Test
     public void testValueNineteen() throws Exception {
-        String testValue = "19";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Nineteen ");
+        assertThat(roundOfOrder.convertToText("19")).isEqualToIgnoringCase("Nineteen ");
     }
 
     @Test
     public void testValueTwenty() throws Exception {
-        String testValue = "20";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Twenty ");
+        assertThat(roundOfOrder.convertToText("20")).isEqualToIgnoringCase("Twenty ");
     }
 
     @Test
     public void testValueTwentyOne() throws Exception {
-        String testValue = "21";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Twenty One ");
+        assertThat(roundOfOrder.convertToText("21")).isEqualToIgnoringCase("Twenty One ");
     }
 
     @Test
     public void testValueThirtyOne() throws Exception {
-        String testValue = "31";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Thirty One ");
+        assertThat(roundOfOrder.convertToText("31")).isEqualToIgnoringCase("Thirty One ");
     }
 
     @Test
     public void testValueThirtyNine() throws Exception {
-        String testValue = "39";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Thirty Nine ");
+        assertThat(roundOfOrder.convertToText("39")).isEqualToIgnoringCase("Thirty Nine ");
     }
 
     @Test
     public void testValueFortyTwo() throws Exception {
-        String testValue = "42";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Forty Two ");
+        assertThat(roundOfOrder.convertToText("42")).isEqualToIgnoringCase("Forty Two ");
     }
 
     @Test
     public void testValueFiftyThree() throws Exception {
-        String testValue = "53";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Fifty Three ");
+        assertThat(roundOfOrder.convertToText("53")).isEqualToIgnoringCase("Fifty Three ");
     }
 
     @Test
     public void testValueSixtyFour() throws Exception {
-        String testValue = "64";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Sixty Four ");
+        assertThat(roundOfOrder.convertToText("64")).isEqualToIgnoringCase("Sixty Four ");
     }
 
     @Test
     public void testValueSeventyFive() throws Exception {
-        String testValue = "75";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Seventy Five ");
+        assertThat(roundOfOrder.convertToText("75")).isEqualToIgnoringCase("Seventy Five ");
     }
 
     @Test
     public void testValueEightySix() throws Exception {
-        String testValue = "86";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Eighty Six ");
+        assertThat(roundOfOrder.convertToText("86")).isEqualToIgnoringCase("Eighty Six ");
     }
 
     @Test
     public void testValueNintyNine() throws Exception {
-        String testValue = "99";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Ninety Nine ");
+        assertThat(roundOfOrder.convertToText("99")).isEqualToIgnoringCase("Ninety Nine ");
     }
 
     @Test
     public void testValueOneHundred() throws Exception {
-        String testValue = "100";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("One Hundred ");
+        assertThat(roundOfOrder.convertToText("100")).isEqualToIgnoringCase("One Hundred ");
     }
 
     @Test
     public void testValueTwoHundredOne() throws Exception {
-        String testValue = "201";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Two Hundred One ");
+        assertThat(roundOfOrder.convertToText("201")).isEqualToIgnoringCase("Two Hundred One ");
     }
 
     @Test
     public void testValueTwoHundredEleven() throws Exception {
-        String testValue = "211";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Two Hundred Eleven ");
+        assertThat(roundOfOrder.convertToText("211")).isEqualToIgnoringCase("Two Hundred Eleven ");
     }
 
     @Test
     public void testValueTwoHundredTwenty() throws Exception {
-        String testValue = "220";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Two Hundred Twenty ");
+        assertThat(roundOfOrder.convertToText("220")).isEqualToIgnoringCase("Two Hundred Twenty ");
     }
 
     @Test
     public void testValueTwoHundredTwentyFive() throws Exception {
-        String testValue = "225";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Two Hundred Twenty Five ");
+        assertThat(roundOfOrder.convertToText("225")).isEqualToIgnoringCase("Two Hundred Twenty Five ");
     }
 
     @Test
     public void testValueThreeHundredThirtyEight() throws Exception {
-        String testValue = "338";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Three Hundred Thirty Eight ");
+        assertThat(roundOfOrder.convertToText("338")).isEqualToIgnoringCase("Three Hundred Thirty Eight ");
     }
 
     @Test
     public void testValueFourHundredFortySix() throws Exception {
-        String testValue = "446";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Four Hundred Forty Six ");
+        assertThat(roundOfOrder.convertToText("446")).isEqualToIgnoringCase("Four Hundred Forty Six ");
     }
 
     @Test
     public void testValueNineHundredNinetyNine() throws Exception {
-        String testValue = "999";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Nine Hundred Ninety Nine ");
+        assertThat(roundOfOrder.convertToText("999")).isEqualToIgnoringCase("Nine Hundred Ninety Nine ");
     }
 
     @Test
     public void testValueOneThousand() throws Exception {
-        String testValue = "1000";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("One Thousand ");
+        assertThat(roundOfOrder.convertToText("1000")).isEqualToIgnoringCase("One Thousand ");
     }
 
     @Test
     public void testValueOneThousandNine() throws Exception {
-        String testValue = "1009";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("One Thousand Nine ");
+        assertThat(roundOfOrder.convertToText("1009")).isEqualToIgnoringCase("One Thousand Nine ");
     }
 
     @Test
     public void testValueOneThousandEleven() throws Exception {
-        String testValue = "1011";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("One Thousand Eleven ");
+        assertThat(roundOfOrder.convertToText("1011")).isEqualToIgnoringCase("One Thousand Eleven ");
     }
 
     @Test
     public void testValueOneThousandTwentyOne() throws Exception {
-        String testValue = "1021";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("One Thousand Twenty One ");
+        assertThat(roundOfOrder.convertToText("1021")).isEqualToIgnoringCase("One Thousand Twenty One ");
     }
 
     @Test
     public void testValueOneThousandThirtyThree() throws Exception {
-        String testValue = "1033";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("One Thousand Thirty Three ");
+        assertThat(roundOfOrder.convertToText("1033")).isEqualToIgnoringCase("One Thousand Thirty Three ");
     }
 
     @Test
     public void testValueOneThousandOneHunderdOne() throws Exception {
-        String testValue = "1101";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("One Thousand One Hundred One ");
+        assertThat(roundOfOrder.convertToText("1101")).isEqualToIgnoringCase("One Thousand One Hundred One ");
     }
 
     @Test
     public void testValueOneThousandOneHunderdEleven() throws Exception {
-        String testValue = "1111";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("One Thousand One Hundred Eleven ");
+        assertThat(roundOfOrder.convertToText("1111")).isEqualToIgnoringCase("One Thousand One Hundred Eleven ");
     }
 
     @Test
     public void testValueOneThousandOneHunderdTwentyOne() throws Exception {
-        String testValue = "1121";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("One Thousand One Hundred Twenty One ");
+        assertThat(roundOfOrder.convertToText("1121")).isEqualToIgnoringCase("One Thousand One Hundred Twenty One ");
     }
 
     @Test
     public void testValueOneThousandOneHunderdNinetyNine() throws Exception {
-        String testValue = "1199";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("One Thousand One Hundred Ninety Nine ");
+        assertThat(roundOfOrder.convertToText("1199")).isEqualToIgnoringCase("One Thousand One Hundred Ninety Nine ");
     }
 
     @Test
     public void testValueOneThousandFourHundredThree() throws Exception {
-        String testValue = "1403";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("One Thousand Four Hundred Three ");
+        assertThat(roundOfOrder.convertToText("1403")).isEqualToIgnoringCase("One Thousand Four Hundred Three ");
     }
 
     @Test
     public void testValueTwoThousandNineHunderdThityThree() throws Exception {
-        String testValue = "2933";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Two Thousand Nine Hundred Thirty Three ");
+        assertThat(roundOfOrder.convertToText("2933")).isEqualToIgnoringCase("Two Thousand Nine Hundred Thirty Three ");
     }
 
     @Test
     public void testValueNineThousandNineHunderdNinetyNine() throws Exception {
-        String testValue = "9999";
-        String retValue = roundOfOrder.convertToText(testValue);
-        assertThat(retValue).isEqualToIgnoringCase("Nine Thousand Nine Hundred Ninety Nine ");
+        assertThat(roundOfOrder.convertToText("9999")).isEqualToIgnoringCase("Nine Thousand Nine Hundred Ninety Nine ");
     }
 
+    @Test
+    public void testValueTenThousand() throws Exception {
+        assertThat(roundOfOrder.convertToText("10000")).isEqualToIgnoringCase("Ten Thousand ");
+    }
 
+    @Test
+    public void testValueTenThousandOne() throws Exception {
+        assertThat(roundOfOrder.convertToText("10001")).isEqualToIgnoringCase("Ten Thousand One ");
+    }
+
+    @Test
+    public void testValueTenThousandEleven() throws Exception {
+        assertThat(roundOfOrder.convertToText("10011")).isEqualToIgnoringCase("Ten Thousand Eleven ");
+    }
+
+    @Test
+    public void testValueTenThousandTwentyOne() throws Exception {
+        assertThat(roundOfOrder.convertToText("10021")).isEqualToIgnoringCase("Ten Thousand Twenty One ");
+    }
+
+    @Test
+    public void testValueTenThousandNinetyNine() throws Exception {
+        assertThat(roundOfOrder.convertToText("10099")).isEqualToIgnoringCase("Ten Thousand Ninety Nine ");
+    }
+
+    @Test
+    public void testValueTenThousandOneHundered() throws Exception {
+        assertThat(roundOfOrder.convertToText("10100")).isEqualToIgnoringCase("Ten Thousand One Hundred ");
+    }
+
+    @Test
+    public void testValueTenThousandOneHunderedOne() throws Exception {
+        assertThat(roundOfOrder.convertToText("10101")).isEqualToIgnoringCase("Ten Thousand One Hundred One ");
+    }
+
+    @Test
+    public void testValueTenThousandOneHunderedTen() throws Exception {
+        assertThat(roundOfOrder.convertToText("10110")).isEqualToIgnoringCase("Ten Thousand One Hundred Ten ");
+    }
+
+    @Test
+    public void testValueTenThousandOneHunderedTwentyOne() throws Exception {
+        assertThat(roundOfOrder.convertToText("10121")).isEqualToIgnoringCase("Ten Thousand One Hundred Twenty One ");
+    }
 }
