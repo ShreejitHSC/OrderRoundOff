@@ -33,9 +33,9 @@ public class RoundOfOrder {
             txtValueOfInteger = valueBelowHundred(intValueOfInput);
         } else if (charLength == 3) {
             txtValueOfInteger = valueBelowThousand(intValueOfInput);
-        }/*else if (charLength == 4){
+        }else if (charLength == 4){
             txtValueOfInteger = valueBelowTenThousand(intValueOfInput);
-        }else if (charLength == 5){
+        }/*else if (charLength == 5){
             txtValueOfInteger = valueBelowLac(intValueOfInput);
         }else if (charLength == 6){
             txtValueOfInteger = valueBelowTenLac(intValueOfInput);
@@ -45,6 +45,16 @@ public class RoundOfOrder {
             txtValueOfInteger = valueAtCrore(intValueOfInput);
         }*/
         return txtValueOfInteger;
+    }
+
+    private String valueBelowTenThousand(Integer intValueOfInput) {
+        if ((intValueOfInput % 1000) < 20) {
+            return valueBelowTwenty(intValueOfInput / 1000) + "Thousand " + valueBelowTwenty(intValueOfInput % 1000);
+        } else if((intValueOfInput % 1000) < 100){
+            return valueBelowTwenty(intValueOfInput / 1000) + "Thousand " + valueBelowHundred(intValueOfInput % 1000);
+        } else {
+            return valueBelowTwenty(intValueOfInput / 1000) + "Thousand " + valueBelowThousand(intValueOfInput % 1000);
+        }
     }
 
     private String valueBelowThousand(Integer intValueOfInput) {
